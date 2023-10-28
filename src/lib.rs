@@ -20,6 +20,10 @@ mod macos_window_holder;
 #[path = "macos.rs"]
 mod os;
 
+#[cfg(target_os = "linux")]
+#[path = "linux.rs"]
+mod os;
+
 #[derive(serde::Deserialize)]
 pub struct Position {
     x: f64,
